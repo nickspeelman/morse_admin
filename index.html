@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Morse Admin</title>
+  <link rel="stylesheet" href="css/admin.css" />
+</head>
+<body>
+  <main class="admin-shell">
+    <header class="admin-header">
+      <h1>Morse Admin</h1>
+      <div id="statusText" class="status-text">Loading settings...</div>
+    </header>
+
+    <section class="card">
+      <h2>Target Phrase</h2>
+      <input id="targetPhraseInput" class="text-input" type="text" />
+    </section>
+
+    <section class="card">
+      <h2>Timing</h2>
+
+      <label>Dot max <input id="dotMaxMs" type="number" /></label>
+      <label>Dash max <input id="dashMaxMs" type="number" /></label>
+      <label>Letter gap <input id="letterGapMs" type="number" /></label>
+      <label>Word gap <input id="wordGapMs" type="number" /></label>
+      <label>Error display <input id="errorFlashMs" type="number" /></label>
+
+      <button id="saveSettingsBtn" class="primary-btn">Save Settings</button>
+    </section>
+
+    <section class="card">
+      <h2>Teams</h2>
+      <div id="teamsList" class="teams-list"></div>
+    </section>
+
+    <section class="card danger-card">
+      <h2>Danger Zone</h2>
+      <button id="resetAllBtn" class="danger-btn">Reset Entire App</button>
+    </section>
+  </main>
+
+  <div id="modalBackdrop" class="modal-backdrop hidden">
+    <div class="modal">
+      <h2 id="modalTitle"></h2>
+      <div id="modalBody"></div>
+      <div id="modalActions" class="modal-actions"></div>
+    </div>
+  </div>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>

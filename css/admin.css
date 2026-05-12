@@ -1,0 +1,156 @@
+:root {
+  --primary-red: #D7261E;
+  --deep-blue: #1F4E8C;
+  --bright-yellow: #F2C230;
+  --emerald-green: #3FA34D;
+  --jet-black: #000000;
+  --off-white: #F5F5F5;
+  --border: #cfd8e3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--off-white);
+  color: var(--jet-black);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.admin-shell {
+  width: min(100%, 560px);
+  margin: 0 auto;
+  padding: 14px;
+}
+
+.admin-header {
+  margin-bottom: 14px;
+}
+
+h1, h2 {
+  margin: 0 0 10px;
+  color: var(--deep-blue);
+}
+
+.status-text {
+  font-weight: 700;
+  color: #4b5563;
+}
+
+.card {
+  background: white;
+  border: 2px solid var(--deep-blue);
+  border-radius: 16px;
+  padding: 14px;
+  margin-bottom: 14px;
+  box-shadow: 0 5px 16px rgba(31, 78, 140, 0.08);
+}
+
+label {
+  display: grid;
+  grid-template-columns: 1fr 110px;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 10px;
+  font-weight: 800;
+}
+
+input {
+  width: 100%;
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.text-input {
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+button {
+  width: 100%;
+  border: 2px solid var(--deep-blue);
+  border-radius: 12px;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: 900;
+  background: var(--bright-yellow);
+  color: var(--jet-black);
+}
+
+.primary-btn {
+  margin-top: 8px;
+}
+
+.teams-list {
+  display: grid;
+  gap: 12px;
+}
+
+.team-admin-card {
+  border: 2px solid var(--border);
+  border-radius: 14px;
+  padding: 12px;
+}
+
+.team-key {
+  font-weight: 900;
+  color: var(--deep-blue);
+  font-size: 18px;
+}
+
+.team-label {
+  margin: 4px 0 10px;
+  font-weight: 700;
+}
+
+.team-buttons {
+  display: grid;
+  gap: 8px;
+}
+
+.danger-card {
+  border-color: var(--primary-red);
+}
+
+.danger-card h2 {
+  color: var(--primary-red);
+}
+
+.danger-btn {
+  background: var(--primary-red);
+  color: white;
+  border-color: var(--primary-red);
+}
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px;
+}
+
+.modal {
+  width: min(100%, 420px);
+  background: white;
+  border-radius: 16px;
+  padding: 16px;
+  border: 2px solid var(--deep-blue);
+}
+
+.modal-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.hidden {
+  display: none;
+}
